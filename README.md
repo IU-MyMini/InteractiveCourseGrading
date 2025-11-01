@@ -18,7 +18,7 @@ The primary goal of our project is to replace the cumbersome Google Sheets-based
 The project will be considered successful when:
 *   TAs and the instructor no longer need to use Google Sheets for managing ITPD grades.
 *   Students can reliably view their individual and group grades without seeing the grades of other students.
-*   The core workflows — submission upload, peer review assignment, and grading—are fully functional and intuitive for all user roles.
+*   The core workflows — submission upload, peer review assignment, and grading — are fully functional and intuitive for all user roles.
 *   The system is successfully integrated into the `my.innopolis.university` portal using the university's Single Sign-On.
 
 ## Description
