@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-    <em>A simplified, integrated LMS for the Interactive IT Product Dev course, designed to streamline individual and group grade management.</em>
+    <em>A simplified, integrated LMS for the IT Product Dev course, designed to streamline individual and group grade management.</em>
 </p>
 
 ## Project Goal
