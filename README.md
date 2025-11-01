@@ -23,7 +23,7 @@ The project will be considered successful when:
 
 ## Description
 
-MyMini is a focused LMS layer developed specifically for the needs of the Interactive IT Product Dev (ITPD) course at Innopolis University. It directly addresses the pain points of managing complex grading schemes in a shared Google Sheet by providing distinct, role-based views and actions.
+The system will provide a focused LMS layer developed specifically for the needs of the IT Product Dev course at Innopolis University. It directly addresses the pain points of managing complex grading schemes in a shared Google Sheet by providing distinct, role-based views and actions.
 
 The system is not intended to replicate the full feature set of Moodle but to offer a simplified and superior experience for the specific grading, submission, and peer-review tasks of this course. Future integration with the Moodle API is planned to synchronize data and avoid duplicate entry.
 
