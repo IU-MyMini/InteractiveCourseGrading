@@ -11,7 +11,7 @@
 
 ## Project Goal
 
-The primary goal of MyMini is to replace the cumbersome Google Sheets-based grade tracking system for the ITPD course with a lightweight, purpose-built Learning Management System (LMS). It aims to provide a clear, secure, and efficient way for students, TAs, and instructors to manage assignments, submissions, and grades—especially for courses that involve both individual and group work.
+The primary goal of our project is to replace the cumbersome Google Sheets-based grade tracking system for the ITPD course with a lightweight Learning Management System (LMS). It aims to provide a clear and efficient way for students, TAs, and instructors to manage assignments, submissions, and grades (considering grading for both individual and group work).
 
 ## Threshold of Success
 
