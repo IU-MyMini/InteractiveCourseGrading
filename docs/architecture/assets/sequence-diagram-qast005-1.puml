@@ -1,0 +1,33 @@
+@startuml QAST005-1 Liveness Probe and Self-Healing Test
+
+actor "Operator" as Op
+participant "Orchestrator\n(kubelet)" as K8s
+participant "Failing Pod" as Pod
+participant "New Pod" as NewPod
+
+group "Initial Healthy State"
+    K8s -> Pod: Liveness Probe (OK)
+    K8s -> Pod: Liveness Probe (OK)
+end
+
+Op -> Pod: Simulate Failure\n(e.g., kill critical process)
+
+group "Failure Detection (Max 30s)"
+    K8s -> Pod: Liveness Probe (Fail)
+    K8s -> Pod: Liveness Probe (Fail)
+    K8s -> Pod: Liveness Probe (Fail)
+end
+
+K8s -> Pod: SIGTERM (Graceful Shutdown)
+K8s -> Pod: Force Delete (if needed)
+
+K8s -> K8s: Schedule New Pod
+K8s -> NewPod: Create & Start
+activate NewPod
+K8s -> NewPod: Liveness Probe
+NewPod -> K8s: 200 OK
+deactivate NewPod
+
+Note over K8s: Service availability is maintained\nby other running pods.
+
+@enduml

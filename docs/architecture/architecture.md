@@ -79,8 +79,16 @@ graph TD
 
 #### QAST002-1
 
-![Sequence diagram](assets/sequence-diagram-qast002-1.png)
+![QAST002-1](assets/sequence-diagram-qast002-1.png)
 
 #### QAST005-1
 
-![Sequence diagram](assets/sequence-diagram-qast005-1.png)
+![QAST005-1](assets/sequence-diagram-qast005-1.png)
+
+#### User Story: Grading
+
+![User Story: Grading](assets/sequence-diagram-user-story-grading.png)
+
+#### User Story: Grades View
+
+![User Story: Grades View](assets/sequence-diagram-user-story-grades-view.png)

@@ -1,0 +1,28 @@
+@startuml QAST002-1 Student Data Isolation Test
+
+actor "Student A" as StA
+participant "Frontend" as FE
+participant "API Gateway" as GW
+participant "Backend" as BE
+database "Database" as DB
+
+StA -> FE: Logs in (Student A Credentials)
+FE -> GW: Request + Student A Token
+GW -> BE: Forward Request
+
+BE -> DB: Load Student A's Data
+DB -> BE: Return Student A's Data
+BE -> GW: Return Student A's Data
+GW -> FE: Return Student A's Data
+FE -> StA: Display Student A's Dashboard
+
+StA -> FE: Attempts to access \n/students/{StudentB-ID}/grades \n(endpoint name may differ)
+FE -> GW: GET /students/{StudentB-ID}/grades \n+ Student A Token \n(endpoint name may differ)
+
+GW -> BE: Forward Request
+BE -> BE: Authorization Check: \nToken Sub (Student A) != Requested ID (Student B)
+BE -> GW: **403 Forbidden**
+GW -> FE: 403 Forbidden
+FE -> StA: Display "Access Denied" Error
+
+@enduml

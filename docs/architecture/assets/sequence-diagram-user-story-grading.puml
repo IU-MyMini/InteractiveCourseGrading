@@ -1,0 +1,38 @@
+@startuml TA Grades Team Assignment
+
+actor "Teaching Assistant" as TA
+participant "Web Frontend" as UI
+participant "Authentication\nService" as Auth
+participant "Grading Service" as Grading
+database "Database" as DB
+
+== Initial State ==
+note over TA: TA is already logged in\nand on team page\nwith assignment chosen
+
+== Grading Process ==
+TA -> UI: Enters grade for team assignment\n(e.g., 85/100)
+UI -> UI: Validate grade input (format, range)
+
+UI -> Auth: Verify TA session & permissions
+Auth -> UI: Session valid, TA authorized
+
+UI -> Grading: submitGrade\n (teamId, assignmentId, grade)
+activate Grading
+
+Grading -> Grading: Validate grading permissions
+Grading -> DB: Save grade \n(teamId, assignmentId, grade, TA_id, timestamp)
+activate DB
+DB -> DB: Commit transaction
+DB -> Grading: Success confirmation
+deactivate DB
+
+Grading -> UI: Grade saved successfully
+deactivate Grading
+
+UI -> TA: Display "Grade saved successfully" message
+
+== Optional: Real-time Update ==
+UI -> UI: Update grade display immediately
+note over UI, TA: Team members will see grade\non their view (not shown here)
+
+@enduml
