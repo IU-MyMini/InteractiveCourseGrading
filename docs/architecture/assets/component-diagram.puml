@@ -1,0 +1,103 @@
+@startuml
+!theme plain
+
+left to right direction
+
+package "Frontend" {
+  package "Student View" {
+    [Student Dashboard] as StudentDashboard
+    [Work Submission] as WorkSubmission
+    [Peer Review Interface] as PeerReviewUI
+  }
+
+  package "TA View" as TAVIEW {
+    [TA Dashboard] as TADashboard
+    [Grading Interface] as GradingUI
+    [Assignment Manager] as AssignmentManager
+    [Group Manager] as GroupManager
+  }
+
+  package "Instructor View" as INSTRUCTORVIEW {
+    [Instructor Dashboard] as InstructorDashboard
+    [TA Management] as TAManagement
+  }
+
+  package "Admin View" as ADMINVIEW {
+    [Course Management] as CourseManagement
+    [Instructor Assignment] as InstructorAssignment
+  }
+
+  [Frontend Router] as FrontendRouter
+}
+
+package "Backend" {
+  package "GradingModule" {
+    [Commands] as Commands
+    [Queries] as Queries
+    [Data Sync Handler] as DataSyncHandler
+  }
+
+  package "Other Modules" {
+    [AuthModule] as AuthModule
+    [PersonalModule] as PersonalModule
+  }
+}
+
+package "External Systems" {
+  [SSO] as SSO
+  [Moodle] as Moodle
+}
+
+' Vertical arrangement for frontend
+StudentDashboard -down-> WorkSubmission
+WorkSubmission -down-> PeerReviewUI
+
+TADashboard -down-> GradingUI
+GradingUI -down-> AssignmentManager
+AssignmentManager -down-> GroupManager
+
+InstructorDashboard -down-> TAManagement
+
+CourseManagement -down-> InstructorAssignment
+
+' Frontend Router connections to views
+FrontendRouter --> StudentDashboard
+FrontendRouter --> TADashboard
+FrontendRouter --> InstructorDashboard
+FrontendRouter --> CourseManagement
+
+' Simplified frontend to backend connections
+FrontendRouter --> Commands : all mutations
+FrontendRouter --> Queries : all data requests
+
+' GradingModule internal structure
+Commands -[hidden]-> Queries
+note right of Commands
+  Write operations:
+  - SubmitWorkCommand
+  - GradeSubmissionCommand
+  - CreateAssignmentCommand
+  - ManageGroupsCommand
+  - ManageTAsCommand
+  - ManageCoursesCommand
+end note
+
+note left of Queries
+  Read operations:
+  - GetStudentDashboardQuery
+  - GetTADashboardQuery
+  - GetInstructorDashboardQuery
+  - GetSubmissionsQuery
+  - GetGradesQuery
+end note
+
+' External integrations
+AuthModule --> SSO : uses
+AuthModule --> GradingModule : provides auth
+PersonalModule --> GradingModule : user data
+DataSyncHandler --> Moodle : syncs data
+DataSyncHandler --> Commands : import data
+DataSyncHandler --> Queries : export data
+
+
+@enduml

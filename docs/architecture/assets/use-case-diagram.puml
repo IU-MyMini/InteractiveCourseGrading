@@ -1,0 +1,56 @@
+@startuml
+!theme plain
+
+left to right direction
+
+actor Student
+actor "TA" as TA
+actor "Course Instructor" as Instructor
+actor Admin
+
+actor "SSO" as SSO
+actor "Moodle" as Moodle
+
+rectangle "Grading System" {
+  (View Dashboard) as view_dash
+  (Submit Work) as submit
+  (Peer Review) as review
+
+  (Grade Submissions) as grade
+  (Create Assignments) as create
+  (Manage Groups) as groups
+
+  (Manage TAs) as manage_tas
+  (Manage Courses) as manage_courses
+  (Assign Instructors) as assign_instructors
+
+  (Authenticate) as auth
+  (Sync Data) as sync
+}
+
+' Left-side actors
+Student --> view_dash
+Student --> submit
+Student --> review
+
+TA --> grade
+TA --> create
+TA --> groups
+
+Instructor -up-|> TA
+Instructor --> manage_tas
+
+Admin --> manage_courses
+Admin --> assign_instructors
+
+' Right-side actors (external systems)
+SSO --> auth
+Moodle --> sync
+
+' Key interactions
+grade --> view_dash : updates
+create --> submit : enables
+groups --> review : enables
+
+sync --> view_dash : imports
+sync --> grade : exports
