@@ -1,5 +1,5 @@
 ---
-title: AI usage
+title: Tech Stack
 parent: Architecture
 nav_order: 1
 layout: default
