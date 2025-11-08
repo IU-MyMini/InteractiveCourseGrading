@@ -1,5 +1,5 @@
 ---
-title: "Interactive Course Grading"
+title: Interactive Course Grading
 nav_order: 1
 layout: home
 ---
