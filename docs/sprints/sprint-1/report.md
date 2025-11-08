@@ -13,20 +13,15 @@ layout: default
 ### MyMini team
 
 | Name          | Innopolis email               | Github username     | Role               |
-|---------------|--------------------------------|---------------------|--------------------|
+|---------------|-------------------------------|---------------------|--------------------|
 | Andrei Markov | a.markov@innopolis.university | markovav-official   | Frontend, Lead     |
 | Grigorii Fil  | g.fil@innopolis.university    | fil-126             | Backend, DevOps    |
 | Timofey Sedov | t.sedov@innopolis.university  | moflotas            | Backend, SRE       |
 
-Innopolis, 2025
-
 ---
 
-## Contribution Statements
+## What we've learned so far
 
-- **Andrei Markov** - Interview script, Qualitative analysis, Market research
-- **Timofey Sedov** - Main documents (report, readme.md)
-- **Grigorii Fil** - Qualitative analysis, Market research
-
-All team members participated in review of produced documents.
-
+- We learned how to set up github pages, and how to use just-the-docs.
+- Gemini is good at audio recognition and summarization.
+- Customer interviews can clarify a lot of things 🙃.
