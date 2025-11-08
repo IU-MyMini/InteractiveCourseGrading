@@ -8,6 +8,16 @@ layout: default
 
 # Architecture
 
+## Table of contents
+
+* [Interactive prototype](#interactive-prototype)
+* [Context diagram](#context-diagram)
+* [Use case diagram](#use-case-diagram)
+* [Component diagram](#component-diagram)
+* [Sequence diagrams](#sequence-diagrams)
+    * [QAST002-1](#qast002-1)
+    * [QAST005-1](#qast005-1)
+
 ## Interactive prototype
 
 Figma
