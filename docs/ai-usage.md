@@ -19,6 +19,7 @@ formatting. Used Gemini 2.5 Pro model.
 - Interview Script Preparation: The initial draft of the customer interview script, including its basic structure and a
   set of foundational questions, was generated using the AI model. This provided a starting point which was then
   personally reviewed, polished, and expanded upon to better fit the specific context of the assignment.
+- Interview Meeting Summarization: The meeting was recorded, the the auidio file was converted by AI into meeting summary.
 - Content Polishing: The AI was also employed to refine the descriptions for the Quality Attributes and the Tech Stack.
   This involved using the model to help improve clarity, conciseness, and professional wording.
 - Markdown Formatting: Finally, the AI assisted in beautifying and structuring the overall document using Markdown,
