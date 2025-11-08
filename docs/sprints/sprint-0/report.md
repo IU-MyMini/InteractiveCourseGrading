@@ -1,3 +1,9 @@
+---
+title: ITPD Assignment 1
+has_children: true
+nav_order: 1
+---
+
 # ITPD Assignment 1
 
 ## Interactive IT Product Dev course

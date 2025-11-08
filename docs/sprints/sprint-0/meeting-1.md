@@ -1,3 +1,9 @@
+---
+title: Meeting with customer \#1
+parent: Sprint 0
+nav_order: 2
+---
+
 # Meeting with customer \#1
 > Date: 31.10.2025
 >

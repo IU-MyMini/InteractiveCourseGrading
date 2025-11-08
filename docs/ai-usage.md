@@ -1,3 +1,8 @@
+---
+title: AI usage
+nav_order: 999
+---
+
 # AI usage
 
 ## Sprint \#0

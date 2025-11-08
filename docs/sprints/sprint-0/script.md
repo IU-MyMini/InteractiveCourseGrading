@@ -1,3 +1,9 @@
+---
+title: Interview script
+parent: Sprint 0
+nav_order: 1
+---
+
 # Inteview script
 ## Understanding the Course
 - How many assignments or sections do you run each semester?
