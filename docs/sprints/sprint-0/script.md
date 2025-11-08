@@ -1,3 +1,10 @@
+---
+title: Interview script
+parent: ITPD Assignment 1
+nav_order: 1
+layout: default
+---
+
 # Inteview script
 ## Understanding the Course
 - How many assignments or sections do you run each semester?

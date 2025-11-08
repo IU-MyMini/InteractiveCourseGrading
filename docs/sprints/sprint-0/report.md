@@ -1,3 +1,11 @@
+---
+title: ITPD Assignment 1
+permalink: /sprints/sprint-0/
+has_children: true
+nav_order: 1
+layout: default
+---
+
 # ITPD Assignment 1
 
 ## Interactive IT Product Dev course

@@ -1,4 +1,11 @@
-# Meeting with customer \#1
+---
+title: Meeting with customer #1
+parent: ITPD Assignment 1
+nav_order: 2
+layout: default
+---
+
+# Meeting with customer #1
 > Date: 31.10.2025
 >
 > Participants: @markovav-official @fil-126 @moflotas Customer
