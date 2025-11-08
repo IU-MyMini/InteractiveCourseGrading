@@ -9,7 +9,7 @@ layout: default
 
 > Date: 07.11.2025
 >
-> Participants: @markovav-official @fil-126 @moflotas Customer
+> Participants: @markovav-official @fil-126 Customer
 
 ## Meeting summary
 
