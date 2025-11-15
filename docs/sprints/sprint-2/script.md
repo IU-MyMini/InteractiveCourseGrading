@@ -22,12 +22,11 @@ layout: default
 
 ### 4. Discuss Product Backlog & Strategic Plan
 * **Technical Progress:** "We have also refined our domain model and have a UML diagram. The main components are 'Assignments,' 'Components' (sub-tasks), 'Groups,' and 'Submissions,' which link students to both individual and group grades."
-* **Key Blocker (Moodle API):** "We have an update on the Moodle API access. We discussed it with our manager, who contacted Alexey Potemkin."
-    * "Currently, he is not willing to provide API access."
-    * "His concern is that he doesn't want professors to leave Moodle for a different platform."
+* **Key Blocker (Moodle API):** "We have an update on the Moodle API access."
+    * "Currently, Department of Education is not willing to provide API access."
+    * "Their concern is that they don't want professors to leave Moodle for a different platform."
     * "Our argument is that this *keeps* professors on Moodle by providing a better UI, and all data would sync back. If we don't get access, professors will just keep using Google Sheets, which is worse for the university."
 
 ### 5. Agree on Further Steps
 * "Given the Moodle API issue, we may need to rely on a manual import/export feature for the MVP."
 * "Our main goal for the next sprint is to get the deployed version functional so you can start using it."
-* "The next course assignment is about 'Testing,' and the one after that is about 'Usage Feedback,' so we need to get you access as soon as possible to start gathering that data."
