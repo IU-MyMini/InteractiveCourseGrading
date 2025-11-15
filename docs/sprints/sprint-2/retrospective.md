@@ -25,7 +25,7 @@ This document outlines the team's reflection on Sprint 2, including our successe
 ### What problems did we encounter
 
 1.  **[Problem] Moodle API Access Denied**
-    * Our request for Moodle API access was formally denied by the university administration (Alexey Potemkin).
+    * Our request for Moodle API access was formally denied by the university administration.
     * **Root Cause:** This is a political and policy-based problem, not a technical one. The administration is concerned that providing API access will encourage professors to abandon Moodle for other platforms.
     * **Solution:** This is only partially resolved. Our customer has offered to personally escalate the issue and advocate for our project. In parallel, our technical backup plan is to build a manual import/export feature, but this is a suboptimal solution.
 
