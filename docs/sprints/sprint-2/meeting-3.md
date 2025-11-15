@@ -30,10 +30,9 @@ The team presented an updated Figma prototype that directly addressed the custom
 The team confirmed that the application module has been successfully deployed to the university's staging server. While the API endpoints are not yet functional, the service is running.
 
 **3. Blocker: Moodle API Access**
-The main discussion point was a significant blocker. The team's request for Moodle API access was denied by Alexey Potemkin.
+The main discussion point was a significant blocker. The team's request for Moodle API access was denied.
 * **Reason for Denial:** The university is concerned that providing API access will encourage professors to "leave" Moodle and use external platforms.
 * **Team's Counter-Argument:** The team explained that their tool is just a different interface, and all data would sync *back* to Moodle, improving data integrity. They argued that *not* providing access simply encourages professors to continue using Google Sheets, which is a worse outcome for the university.
-* **Customer's Response:** The customer strongly agreed, stating, "The professor has *already left* Moodle for Google Sheets." He offered to speak with Potemkin directly to support the request.
 
 **4. Strategic Plan & Next Steps:**
 The customer advised the team on how to handle organizational resistance. He suggested that the best strategy is to deliver a fully working product (even without integration) and then demonstrate its clear superiority. Once the value is proven, it's much easier to make the case for the "small missing piece" of API access.
