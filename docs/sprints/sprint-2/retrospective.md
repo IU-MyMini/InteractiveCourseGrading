@@ -1,3 +1,11 @@
+---
+title: ITPD Assignment 3
+permalink: /sprints/sprint-2/
+has_children: true
+nav_order: 3
+layout: default
+---
+
 # Sprint 2 Retrospective
 
 **Date:** November 15, 2025
