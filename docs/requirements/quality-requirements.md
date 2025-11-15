@@ -29,6 +29,50 @@ layout: default
 | M                                           |     | 002, 005 | 006 |
 | L                                           | 003 |          |     |
 
+## Quality Attribute Scenario Priority Rationale
+
+### High Business & High Technical Priority
+
+#### QAS001 - Zero-Downtime Deployment
+**Business Priority**: High - Critical for academic continuity during grading periods when any system downtime could disrupt student submissions and instructor grading workflows. The system must remain available during deployment windows to avoid impacting coursework.
+
+**Technical Priority**: High - Requires complex Kubernetes orchestration, rolling update strategies, proper pod lifecycle management, and sophisticated health checking to ensure seamless transitions between versions without service interruption.
+
+### High Business & Medium Technical Priority
+
+#### QAS002 - Personal Data Protection  
+**Business Priority**: High - Essential for regulatory compliance and maintaining institutional trust. Student data breaches could have severe legal consequences and damage the university's reputation.
+
+**Technical Priority**: Medium - While security implementation requires careful attention, the patterns for role-based access control, data encryption, and secure API design are well-established in modern web frameworks.
+
+### Medium Business & Medium Technical Priority
+
+#### QAS005 - Automated Health Checks & Self-Healing
+**Business Priority**: Medium - Important for reducing operational overhead and ensuring system reliability, but manual intervention remains possible during initial rollout phases.
+
+**Technical Priority**: Medium - Standard Kubernetes patterns for liveness/readiness probes and pod restart policies provide established solutions, though proper configuration requires expertise.
+
+### Medium Business & Low Technical Priority  
+
+#### QAS006 - Backend Response Time Performance
+**Business Priority**: Medium - Important for user experience but not critical for core functionality. The 500ms threshold supports efficient workflow without being mission-critical.
+
+**Technical Priority**: Low - Performance optimization through caching, query optimization, and proper indexing follows standard patterns in .NET/PostgreSQL ecosystems.
+
+### Low Business & Low Technical Priority
+
+#### QAS004 - Dynamic Configuration Updates
+**Business Priority**: Low - Configuration changes are infrequent in production and can typically be handled through standard deployment processes without requiring dynamic updates.
+
+**Technical Priority**: Low - Simple implementation using established configuration management patterns without complex distributed systems challenges.
+
+### Low Business & Medium Technical Priority
+
+#### QAS003 - Modular Feature Addition
+**Business Priority**: Low - While beneficial for long-term maintainability, the initial MVP focuses on core functionality, and feature additions can follow standard development cycles.
+
+**Technical Priority**: Medium - Requires careful microservice design and API contract management, but benefits from the established .NET/React technology stack.
+
 ## Maintainability
 
 ### QAS001
