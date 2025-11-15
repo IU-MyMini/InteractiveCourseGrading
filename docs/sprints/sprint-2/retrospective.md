@@ -14,7 +14,7 @@ This document outlines the team's reflection on Sprint 2, including our successe
 
 ---
 
-### What went well?
+### What went well
 
 1.  **Prototype Feedback Loop:** We successfully iterated on our Figma prototype based on the customer's feedback from Sprint 1. We changed the professor's view to be "group-first," which the customer confirmed was the correct workflow.
 2.  **Initial Deployment Milestone:** We achieved a major technical goal by successfully deploying the initial "shell" of our module to the university's staging server. This unblocks future work on providing real-time access to the customer.
@@ -22,7 +22,7 @@ This document outlines the team's reflection on Sprint 2, including our successe
 
 ---
 
-### What problems did you encounter?
+### What problems did we encounter
 
 1.  **[Problem] Moodle API Access Denied**
     * Our request for Moodle API access was formally denied by the university administration (Alexey Potemkin).
@@ -36,7 +36,7 @@ This document outlines the team's reflection on Sprint 2, including our successe
 
 ---
 
-### What will you change in the next Sprint?
+### What will we change in the next Sprint
 
 | Priority | Actionable Change | Rationale |
 | :--- | :--- | :--- |
