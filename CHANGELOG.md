@@ -13,5 +13,4 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - endpoint  [HttpGet] api/Grading/Course/{guid:CourseId}
 - endpoint [HttpPost] api/Grading/Assignment
 - endpoint [HttpPut] api/Grading/Assignment/{guid:AssignmentId}
-
-  
+- courses view
