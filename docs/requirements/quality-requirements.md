@@ -128,7 +128,7 @@ layout: default
 
 #### QAST002-2
 
-- Student Data Isolation Test
+- Unauthorized Access Denial Test
 - Objective: Verify that an unauthorized user cannot obtain personal information
 - Steps:
     - Create a test script that tries to directly access API endpoints without authorization
