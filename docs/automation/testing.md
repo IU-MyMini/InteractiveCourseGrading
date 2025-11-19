@@ -79,6 +79,8 @@ To make our 30% coverage count, we are highly selective about what we test. We i
     * **Infrastructure:** We rely on manual testing for database integrations during the MVP phase.
 
 
-## Quality attribute scenario tests TODO
-- Provide a link to that QAST’s section in ./docs/requirements/quality-requirements.md;
-- Explain how you automated it, with links to the implementation;
+## Quality attribute scenario tests
+- [QAST002-2](../requirements/quality-requirements.md#qast002-2)
+  - We made the [script](https://github.com/IU-MyMini/Backend/blob/master/Modules/Grading/Tests/Qast/Qas002.cs) that tries to call different endpoints configured through env variable without authorization, and we expect each endpoint to return 401 Unauthorized error.
+- [QAST006-1]((../requirements/quality-requirements.md#qast006-1))
+  - We made the [script](https://github.com/IU-MyMini/Backend/blob/master/Modules/Grading/Tests/Qast/Qas006.cs) that calls specific endpoint configured through env variable for some time and collects the response time stats.
