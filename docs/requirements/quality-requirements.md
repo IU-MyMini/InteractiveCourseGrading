@@ -126,6 +126,16 @@ layout: default
 - Success Criteria:
     - The system returns a 403 Forbidden (or 404 Not Found) error, explicitly denying access to the resource
 
+#### QAST002-2
+
+- Student Data Isolation Test
+- Objective: Verify that an unauthorized user cannot obtain personal information
+- Steps:
+    - Create a test script that tries to directly access API endpoints without authorization
+    - Check the status codes returned by the system
+- Success Criteria:
+    - The system returns a 401 Unauthorized error for each tested endpoint, explicitly denying access to the resource
+
 ## Modifiability
 
 ### QAS003
@@ -226,7 +236,7 @@ layout: default
 - Objective: Verify that 99% of backend requests are served within 500ms under a realistic production load
 - Steps:
     - Design a test script that mimics a realistic user workflow
-    - Run the test for a sustained period (10 minutes)
+    - Run the test for a sustained period (1 minute)
     - Collect response time metrics for all backend API calls made during the test
 - Success Criteria:
     - The 99th percentile response time for all backend API calls is less than or equal to 500 milliseconds
