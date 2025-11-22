@@ -52,3 +52,21 @@ The backend will be a .NET-based API designed for performance, scalability, and 
 ## Database
 
 * **PostgreSQL:** A powerful, open-source object-relational database. It is highly reliable, feature-rich (supporting complex queries, JSONB types, etc.), and well-supported by EF Core. It's a proven choice for production applications requiring data integrity.
+
+---
+
+## Testing
+
+This section details the frameworks and tools used to ensure application reliability through automated testing.
+
+* **xUnit:** The premier open-source unit testing framework for .NET. We use it to write and run automated tests, ensuring individual units of code function correctly and preventing regressions.
+* **coverlet.collector:** A cross-platform code coverage framework. It integrates with the build process to measure how much of our code is actually executed by our tests, helping us identify untested logic.
+* **Microsoft.NET.Test.Sdk:** The core MSBuild targets and properties required for building .NET test projects. It acts as the bridge that allows our tests and coverage tools to run seamlessly via the standard `dotnet test` command and in CI/CD pipelines.
+
+---
+
+## Static analysis
+
+This section covers tools used to enforce code quality, style consistency, and formatting rules without executing the application.
+
+* **dotnet format:** The built-in code formatter and linter for the .NET SDK. It enforces code style preferences and analyzes code quality based on our `.editorconfig` rules, ensuring a consistent and readable codebase without manual formatting effort.

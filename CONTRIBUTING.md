@@ -87,6 +87,12 @@ Our workflow is a simplified version of **GitHub Flow** (inspired by [guides.git
 
 This branching model is simple and effective. It isolates all in-progress work from the stable `main` branch, preventing "work-in-progress" code from breaking our app.
 
+### Secrets management
+
+- For local environment, we use secrets.json file. This file is located in API project directory, and it is ignored during commits (see [.gitignore](https://github.com/IU-MyMini/Backend/blob/master/.gitignore)). There is example.secrets.json file with dummy values that provides the structure and needed secrets for the module.
+- For staging environment, we use environment files with structure similar to secrets.json. 
+- For production environment, we use kubernetes environment config.
+
 # Branch Protection Rules
 
 The main branch is protected by the following rules.
