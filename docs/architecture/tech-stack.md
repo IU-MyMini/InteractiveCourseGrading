@@ -70,3 +70,59 @@ This section details the frameworks and tools used to ensure application reliabi
 This section covers tools used to enforce code quality, style consistency, and formatting rules without executing the application.
 
 * **dotnet format:** The built-in code formatter and linter for the .NET SDK. It enforces code style preferences and analyzes code quality based on our `.editorconfig` rules, ensuring a consistent and readable codebase without manual formatting effort.
+
+
+## Analytics
+
+**Tools Used:**
+
+* **prometheus-net**
+
+  * **Purpose:** Collect HTTP request metrics (request counts, status codes, latencies) from the backend.
+  * **Reason for choice:** Lightweight, easy to integrate with .NET, exposes metrics in Prometheus format for scraping.
+
+* **VictoriaMetrics (single-node)**
+
+  * **Purpose:** Store and process metrics scraped from prometheus-net.
+  * **Reason for choice:** High performance, simple deployment, supports Prometheus query language, cost-effective for a university project.
+
+* **Grafana**
+
+  * **Purpose:** Visualize metrics in dashboards, create alerts.
+  * **Reason for choice:** Well-supported, integrates seamlessly with Prometheus/VictoriaMetrics, widely used for observability.
+
+**Instrumentation:**
+
+* Default HTTP metrics from prometheus-net; no additional custom instrumentation needed.
+* Metrics endpoints exposed for VictoriaMetrics scraping.
+
+## Observability
+
+**Tools Used:**
+
+* **Serilog**
+
+  * **Purpose:** Collect structured logs from the backend.
+  * **Reason for choice:** Flexible, integrates with OpenTelemetry, supports structured logging and multiple sinks (file, OTEL).
+
+* **OTEL Collector (OpenTelemetry)**
+
+  * **Purpose:** Collect logs from Serilog and send them to VictoriaLogs in OTLP protobuf format.
+  * **Reason for choice:** Standardized telemetry pipeline, supports multiple signals and export protocols.
+
+* **VictoriaLogs (single-node)**
+
+  * **Purpose:** Centralized storage for structured logs.
+  * **Reason for choice:** Easy to deploy, integrates with Grafana for visualization, supports OTEL ingestion.
+
+* **Grafana**
+
+  * **Purpose:** Dashboarding for logs and metrics, alerting.
+  * **Reason for choice:** Unified view of metrics and logs, flexible alerting options.
+
+**Instrumentation:**
+
+* Backend controllers and middleware emit logs via Serilog.
+* Metrics collected automatically via prometheus-net.
+* Logs forwarded to VictoriaLogs using OpenTelemetry bridge in production.
+* Environment-specific configuration (`appsettings.Production.json`, `appsettings.Development.json`) controls telemetry collection.
