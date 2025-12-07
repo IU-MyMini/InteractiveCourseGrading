@@ -33,3 +33,33 @@ In Sprint #2, AI was utilized as an assistant for processing meeting audio, draf
 - Documentation Support: The AI was used to help structure and draft initial versions of complex documents based on our prompts. This included the CONTRIBUTING.md file, the 'Design Decisions' table for our architecture, and new sections for our docs/plan.md.
 - Retrospective Assistance: We used the AI to help structure our retrospective.md file, providing a clear template for our successes, problems, and actionable changes, which we then filled in with our own analysis.
 - Markdown Formatting: As with the previous sprint, the AI was used to help format our documentation for clarity, readability, and consistency in Markdown.
+
+## Sprint #3
+
+In Sprint #3, AI served as a collaborative assistant for processing discussions, generating technical artifacts, and improving code quality. Used Gemini 2.5 Pro model.
+
+- Meeting Analysis & Action Items: Audio from the sprint planning and customer check-in was processed by AI to produce structured summaries, highlight decisions, and extract clear action items for the team backlog.
+
+- Code Generation & Refactoring: For well-defined tasks, AI was used to generate boilerplate code, utility functions, and unit test skeletons.
+
+- Documentation Maintenance: AI helped update the plan.md and architecture.md files based on new decisions, ensuring consistency and clarity. It also formatted technical notes for the team's knowledge base.
+
+## Sprint #4
+
+During Sprint #4, AI usage was focused on accelerating development, solving blocking issues, and enhancing team coordination. Used Gemini 2.5 Pro model.
+
+- Debugging & Problem-Solving: When encountering bugs or technical challenges, AI was used to analyze error logs, suggest potential causes, and propose multiple solution approaches for the team to evaluate and implement.
+
+- Automation Scripts: To improve team workflow, AI was prompted to write small automation scripts (e.g., for data cleanup, build checks, or deployment helper scripts), which were then reviewed and integrated.
+
+- Retrospective Analysis: AI helped analyze feedback from team retrospectives by categorizing comments into themes (e.g., process, communication, tools) to identify clear improvement areas for the next sprint.
+
+## Sprint #5
+
+In this sprint AI played a crucial role in deploying our monitoring infrastructure, creating dashboards, and accelerating final assignments. Used Gemini 2.5 Pro model.
+
+- Monitoring Stack Deployment: AI assisted with deploying and configuring our observability stack, including VictoriaMetrics, VictoriaLogs, and Grafana. It provided Docker Compose configurations, troubleshooting guidance for connectivity issues, and advice on resource optimization.
+
+- Query Language Learning & Dashboard Creation: AI helped team members quickly learn PromQL and LogQL query languages by explaining syntax, providing examples, and debugging our queries. We used AI to generate initial dashboard templates that we then customized for our specific metrics and logs visualization.
+
+- Assignment Structure Bootstrapping: For documentation and technical reports, AI helped bootstrap the structure of assignment by suggesting outlines, section headers, and content organization based on requirements, which we then filled with our specific implementations and analysis.

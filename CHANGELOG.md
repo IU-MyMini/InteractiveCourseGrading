@@ -4,6 +4,27 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.0.5] - 07.12.2025
+
+### Added
+- GET /debug/metrics
+
+## [0.0.4] - 5.12.2025
+
+### Added 
+- "Extra" component for ITPD assignments
+
+## [0.0.3] - 28.11.2025
+
+### Fixed
+- Assignments ordering in student view
+
+## [0.0.2] - 30.11.2025
+
+### Added
+
+- Assignments ordering in student view
+
 ## [0.0.1] - 22.11.2025
 
 ### Added
