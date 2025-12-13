@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.0.6] - 13.12.2025
+
+### Added
+- Student submissions (via files)
+- Minor DTO changes
+
+### Fixed
+- Updated FileInfo, so that metadata of files can be previewed without downloading
+
 ## [0.0.5] - 07.12.2025
 
 ### Added
